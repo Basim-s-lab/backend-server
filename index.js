@@ -13,6 +13,10 @@ app.get('/questions', (req, res) => {
     res.sendFile(__dirname + "/data/questions.json")
 })
 
+app.get("/cities", (req, res) => {
+    res.sendFile(__dirname + "/data/cities.json")
+})
+
 app.listen(port, () => {
     console.log(`listening on port ${port}`)
 })
