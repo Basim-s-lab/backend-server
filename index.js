@@ -28,7 +28,8 @@ app.get("/cities", (req, res) => {
 app.get("/cities/:id", (req, res) => {
     const cityId = req.params.id
     const city = cities.filter(city => city.id == cityId)
-    res.json({ city })
+    console.log({ city })
+    res.json(city)
 })
 
 app.listen(port, () => {
