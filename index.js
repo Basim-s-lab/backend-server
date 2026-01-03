@@ -21,14 +21,13 @@ app.get('/questions', (req, res) => {
 
 const { cities } = citiesData
 
-app.get("/cities", (req, res) => {
+app.get("/app/cities", (req, res) => {
     res.sendFile(__dirname + "/data/cities.json")
 })
 
-app.get("/cities/:id", (req, res) => {
+app.get("/app/cities/:id", (req, res) => {
     const cityId = req.params.id
     const city = cities.filter(city => city.id == cityId)
-    console.log({ city })
     res.json(city)
 })
 
